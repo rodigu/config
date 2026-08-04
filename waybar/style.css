@@ -1,0 +1,267 @@
+* {
+    font-family: "Space Mono", FontAwesome, sans-serif;
+    font-size: 13px;
+}
+
+window#waybar {
+    background-color: #333d29;
+    border: none;
+    border-radius: 10px;
+    color: #b6ad90;
+    margin: 5px;
+}
+
+window#waybar.hidden {
+    opacity: 0.2;
+}
+
+button {
+    box-shadow: none;
+    border: none;
+    border-radius: 8px;
+}
+
+button:hover {
+    background: inherit;
+    box-shadow: none;
+}
+
+#workspaces button {
+    padding: 0 8px;
+    background-color: transparent;
+    color: #b6ad90;
+    border-radius: 8px;
+    margin: 3px 2px;
+}
+
+#workspaces button:hover {
+    background: rgba(0, 0, 0, 0.2);
+}
+
+#workspaces button.active,
+#workspaces button.focused {
+    background-color: #414833;
+    box-shadow: none;
+}
+
+#workspaces button.urgent {
+    background-color: #7f4f24;
+    color: #b6ad90;
+}
+
+#mode {
+    background-color: #414833;
+    border-radius: 8px;
+    box-shadow: none;
+}
+
+#clock,
+#battery,
+#cpu,
+#memory,
+#disk,
+#temperature,
+#backlight,
+#network,
+#pulseaudio,
+#wireplumber,
+#custom-media,
+#tray,
+#mode,
+#idle_inhibitor,
+#scratchpad,
+#power-profiles-daemon,
+#mpd {
+    padding: 0 12px;
+    color: #b6ad90;
+    border-radius: 8px;
+    margin: 3px 2px;
+}
+
+#window,
+#workspaces {
+    margin: 0 4px;
+}
+
+.modules-left > widget:first-child > #workspaces {
+    margin-left: 0;
+}
+
+.modules-right > widget:last-child > #workspaces {
+    margin-right: 0;
+}
+
+#clock {
+    background-color: #414833;
+}
+
+#battery {
+    background-color: #414833;
+}
+
+#battery.charging,
+#battery.plugged {
+    background-color: #656d4a;
+}
+
+@keyframes blink {
+    to {
+        background-color: #7f4f24;
+        color: #b6ad90;
+    }
+}
+
+#battery.critical:not(.charging) {
+    background-color: #582f0e;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: steps(12);
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#power-profiles-daemon {
+    padding-right: 15px;
+    background-color: #414833;
+}
+
+#power-profiles-daemon.performance {
+    background-color: #7f4f24;
+}
+
+#power-profiles-daemon.balanced {
+    background-color: #656d4a;
+}
+
+#power-profiles-daemon.power-saver {
+    background-color: #414833;
+}
+
+#cpu {
+    background-color: #414833;
+}
+
+#memory {
+    background-color: #414833;
+}
+
+#disk {
+    background-color: #414833;
+}
+
+#backlight {
+    background-color: #414833;
+}
+
+#network {
+    background-color: #414833;
+}
+
+#network.disconnected {
+    background-color: #582f0e;
+}
+
+#pulseaudio {
+    background-color: #414833;
+}
+
+#pulseaudio.muted {
+    background-color: #333d29;
+    color: #656d4a;
+}
+
+#wireplumber {
+    background-color: #414833;
+}
+
+#wireplumber.muted {
+    background-color: #582f0e;
+}
+
+#custom-media {
+    background-color: #414833;
+    min-width: 100px;
+}
+
+#temperature {
+    background-color: #414833;
+}
+
+#temperature.critical {
+    background-color: #582f0e;
+}
+
+#tray {
+    background-color: #414833;
+}
+
+#tray > .passive {
+    -gtk-icon-effect: dim;
+}
+
+#tray > .needs-attention {
+    -gtk-icon-effect: highlight;
+    background-color: #7f4f24;
+}
+
+#idle_inhibitor {
+    background-color: #414833;
+}
+
+#idle_inhibitor.activated {
+    background-color: #656d4a;
+    color: #b6ad90;
+}
+
+#mpd {
+    background-color: #414833;
+}
+
+#mpd.disconnected {
+    background-color: #582f0e;
+}
+
+#mpd.stopped {
+    background-color: #333d29;
+}
+
+#mpd.paused {
+    background-color: #414833;
+}
+
+#language {
+    background: #414833;
+    color: #b6ad90;
+    padding: 0 5px;
+    margin: 0 5px;
+    min-width: 16px;
+}
+
+#scratchpad {
+    background: rgba(0, 0, 0, 0.2);
+}
+
+#scratchpad.empty {
+    background-color: transparent;
+}
+
+#privacy {
+    padding: 0;
+}
+
+#privacy-item {
+    padding: 0 5px;
+    color: #b6ad90;
+}
+
+#privacy-item.screenshare {
+    background-color: #7f4f24;
+}
+
+#privacy-item.audio-in {
+    background-color: #656d4a;
+}
+
+#privacy-item.audio-out {
+    background-color: #414833;
+}
