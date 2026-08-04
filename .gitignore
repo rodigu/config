@@ -1,0 +1,36 @@
+# Browser data (contains passwords, cookies, sessions)
+mozilla/
+
+# Desktop environment state/session files
+dconf/
+ibus/
+qtvirtualkeyboard/
+kactivitymanagerdrc
+kconf_updaterc
+ktimezonedrc
+kwalletrc
+plasma-localerc
+
+# Hardware/monitor specific configs
+kwinoutputconfig.json
+gamescope/
+
+# CachyOS specific
+cachyos/
+cachyos-hello.json
+
+# Auto-generated shell variables
+fish/fish_variables
+
+# Built-in syntax files (not user config)
+micro/syntax/
+
+# XDG user directories (machine-specific)
+user-dirs.dirs
+user-dirs.locale
+
+# Editor temp files
+*.local
+*.bak
+*.swp
+*~
