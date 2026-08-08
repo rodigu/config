@@ -54,6 +54,7 @@ button:hover {
 #workspaces button.urgent {
     background-color: #FAC244;
     color: #3B3B3B;
+    border: 2px solid #B76862;
 }
 
 #mode {
@@ -119,14 +120,19 @@ button:hover {
 
 @keyframes blink {
     to {
-        background-color: #FAC244;
-        color: #3B3B3B;
+        background-color: #B76862;
+        color: #E3E8E1;
     }
 }
 
-#battery.critical:not(.charging) {
+#battery.warning:not(.charging) {
     background-color: #FAC244;
     color: #3B3B3B;
+}
+
+#battery.critical:not(.charging) {
+    background-color: #B76862;
+    color: #E3E8E1;
     animation-name: blink;
     animation-duration: 0.5s;
     animation-timing-function: steps(12);
@@ -206,8 +212,8 @@ button:hover {
 }
 
 #temperature.critical {
-    background-color: #FAC244;
-    color: #3B3B3B;
+    background-color: #B76862;
+    color: #E3E8E1;
 }
 
 #tray {
@@ -273,8 +279,8 @@ button:hover {
 }
 
 #privacy-item.screenshare {
-    background-color: #FAC244;
-    color: #3B3B3B;
+    background-color: #B76862;
+    color: #E3E8E1;
 }
 
 #privacy-item.audio-in {
