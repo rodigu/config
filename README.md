@@ -25,8 +25,8 @@ A muted, coastal-inspired light theme pairing cool slate blues with warm earthy 
 | 5 | Granite | `#4F5D4E` | Muted text | Dark green-gray for secondary text and subtle elements. |
 | 6 | Dry Sage | `#C1BD8E` | Secondary accent | Muted yellow-green for earthy warmth and soft highlights. |
 | 7 | Soft Linen | `#E3E8E1` | Background | Warm off-white for a natural, inviting base. |
-| 8 | Tuscan Sun | `#FAC244` | Warning/Highlight | Golden yellow for warnings and energetic accents. |
-| 9 | Lobster Pink | `#B76862` | Error | Muted pink-red for errors and destructive actions. |
+| 8 | Tuscan Sun | `#FAC244` | Warning/Highlight | Golden yellow for warnings, highlights, and energetic accents. |
+| 9 | Lobster Pink | `#B76862` | Error/Highlight | Muted pink-red for errors, destructive actions, and warm highlights. |
 
 ### CSS Variables
 
@@ -68,6 +68,7 @@ A muted, coastal-inspired light theme pairing cool slate blues with warm earthy 
 | Text | Gunmetal `#3B3B3B` | Waybar text, kitty foreground, pi message text |
 | Accent | Dry Sage `#C1BD8E` | Charging states, power saver mode, wofi selection |
 | Warning | Tuscan Sun `#FAC244` | Urgent workspaces, critical battery, disconnected states |
+| Highlight | Tuscan Sun `#FAC244` or Lobster Pink `#B76862` | Active borders, selected items, emphasis |
 | Muted | Granite `#4F5D4E` | Secondary text, subtle accents |
 
 ### Themed Software
