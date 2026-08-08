@@ -17,7 +17,7 @@ window {
 }
 
 #input:focus {
-    border-color: #64AEC4;
+    border-color: #B76862;
 }
 
 #inner-box {
@@ -59,8 +59,9 @@ window {
 }
 
 #entry:hover {
-    background-color: #C1BD8E;
+    background-color: rgba(183, 104, 98, 0.15);
     color: #3B3B3B;
+    border: 2px solid #B76862;
 }
 
 #entry:hover #text {
