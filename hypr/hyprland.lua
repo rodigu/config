@@ -48,7 +48,7 @@ hl.monitor({
 -- Set programs that you use
 local terminal    = "kitty"
 local fileManager = "nautilus"
-local menu        = "wofi"
+local menu        = "wofi --style ~/.config/wofi/style.css"
 
 
 -------------------
@@ -113,14 +113,14 @@ hl.permission("/usr/(lib|libexec|lib64)/xdg-desktop-portal-hyprland", "screencop
 -- Refer to https://wiki.hypr.land/Configuring/Basics/Variables/
 hl.config({
     general = {
-        gaps_in  = 1,
-        gaps_out = 3,
+        gaps_in  = 3,
+        gaps_out = 5,
 
-        border_size = 1,
+        border_size = 2,
 
         col = {
-            active_border   = "rgba(9db4c0ee)",
-            inactive_border = "rgba(5c6b73aa)",
+            active_border   = "rgba(FAC244ee)",
+            inactive_border = "rgba(B76862aa)",
         },
 
         -- Set to true to enable resizing windows by clicking and dragging on borders and gaps
@@ -144,7 +144,7 @@ hl.config({
             enabled      = true,
             range        = 4,
             render_power = 3,
-            color        = 0xee253237,
+            color        = 0xee000000,
         },
 
         blur = {
@@ -158,6 +158,10 @@ hl.config({
     animations = {
         enabled = true,
     },
+
+    cursor = {
+        no_hardware_cursors = true
+    }
 })
 
 -- Default curves and animations, see https://wiki.hypr.land/Configuring/Advanced-and-Cool/Animations/
@@ -253,7 +257,11 @@ hl.config({
 
         follow_mouse = 1,
 
-        sensitivity = 0, -- -1.0 - 1.0, 0 means no modification.
+        accel_profile = "flat",
+
+        force_no_accel = true,
+
+        sensitivity = 1.0, -- -1.0 - 1.0, 0 means no modification.
 
         touchpad = {
             natural_scroll = false,
@@ -299,7 +307,7 @@ hl.bind(mainMod .. " + up",    hl.dsp.focus({ direction = "up" }))
 hl.bind(mainMod .. " + down",  hl.dsp.focus({ direction = "down" }))
 
 -- personalized keybinds
-hl.bind(mainMod .. " + space", hl.dsp.exec_cmd("wofi --show drun"))
+hl.bind(mainMod .. " + space", hl.dsp.exec_cmd("pkill -x wofi; wofi --show drun --style ~/.config/wofi/style.css"))
 
 hl.bind(mainMod .. " + SHIFT + S",  hl.dsp.exec_cmd("hyprshot --mode region --output-folder ~/Pictures/hyprshot"))
 
