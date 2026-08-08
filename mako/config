@@ -22,10 +22,12 @@ border-color=#407489
 
 [urgency=normal]
 border-color=#4C98C3
+progress-color=source #FAC244
 
 [urgency=critical]
-border-color=#FAC244
+border-color=#B76862
 text-color=#3B3B3B
+progress-color=source #B76862
 
 # Actions
 on-notify=none
