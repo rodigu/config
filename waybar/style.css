@@ -4,10 +4,10 @@
 }
 
 window#waybar {
-    background-color: #253237;
+    background-color: transparent;
     border: none;
     border-radius: 10px;
-    color: #e0fbfc;
+    color: #3B3B3B;
     margin: 5px;
 }
 
@@ -18,7 +18,7 @@ window#waybar.hidden {
 button {
     box-shadow: none;
     border: none;
-    border-radius: 8px;
+    border-radius: 5px;
 }
 
 button:hover {
@@ -27,31 +27,40 @@ button:hover {
 }
 
 #workspaces button {
-    padding: 0 8px;
-    background-color: transparent;
-    color: #e0fbfc;
-    border-radius: 8px;
-    margin: 3px 2px;
+    padding: 0;
+    min-width: 18px;
+    min-height: 18px;
+    background-color: rgba(227, 232, 225, 0.7);
+    color: #4F5D4E;
+    border: 2px solid rgba(227, 232, 225, 0.6);
+    border-radius: 50%;
+    margin: 5px 3px;
+    font-size: 10px;
 }
 
 #workspaces button:hover {
-    background: rgba(0, 0, 0, 0.2);
+    background-color: #C1BD8E;
+    color: #3B3B3B;
 }
 
 #workspaces button.active,
 #workspaces button.focused {
-    background-color: #5c6b73;
+    background-color: rgba(79, 93, 78, 0.7);
+    color: #E3E8E1;
+    border: 2px solid rgba(227, 232, 225, 0.6);
     box-shadow: none;
 }
 
 #workspaces button.urgent {
-    background-color: #9db4c0;
-    color: #253237;
+    background-color: #FAC244;
+    color: #3B3B3B;
 }
 
 #mode {
-    background-color: #5c6b73;
-    border-radius: 8px;
+    background-color: rgba(227, 232, 225, 0.7);
+    border: none;
+    color: #3B3B3B;
+    border-radius: 5px;
     box-shadow: none;
 }
 
@@ -74,8 +83,10 @@ button:hover {
 #custom-system,
 #mpd {
     padding: 0 12px;
-    color: #e0fbfc;
-    border-radius: 8px;
+    color: #3B3B3B;
+    background-color: rgba(227, 232, 225, 0.7);
+    border: none;
+    border-radius: 5px;
     margin: 3px 2px;
 }
 
@@ -93,29 +104,29 @@ button:hover {
 }
 
 #clock {
-    background-color: #5c6b73;
+    background-color: rgba(227, 232, 225, 0.7);
 }
 
 #battery {
-    background-color: #5c6b73;
+    background-color: rgba(227, 232, 225, 0.7);
 }
 
 #battery.charging,
 #battery.plugged {
-    background-color: #9db4c0;
-    color: #253237;
+    background-color: #64AEC4;
+    color: #3B3B3B;
 }
 
 @keyframes blink {
     to {
-        background-color: #c2dfe3;
-        color: #253237;
+        background-color: #FAC244;
+        color: #3B3B3B;
     }
 }
 
 #battery.critical:not(.charging) {
-    background-color: #c2dfe3;
-    color: #253237;
+    background-color: #FAC244;
+    color: #3B3B3B;
     animation-name: blink;
     animation-duration: 0.5s;
     animation-timing-function: steps(12);
@@ -125,81 +136,82 @@ button:hover {
 
 #power-profiles-daemon {
     padding-right: 15px;
-    background-color: #5c6b73;
+    background-color: rgba(227, 232, 225, 0.7);
 }
 
 #power-profiles-daemon.performance {
-    background-color: #9db4c0;
-    color: #253237;
+    background-color: #FAC244;
+    color: #3B3B3B;
 }
 
 #power-profiles-daemon.balanced {
-    background-color: #5c6b73;
+    background-color: rgba(227, 232, 225, 0.7);
 }
 
 #power-profiles-daemon.power-saver {
-    background-color: #253237;
+    background-color: #64AEC4;
+    color: #3B3B3B;
 }
 
 #cpu {
-    background-color: #5c6b73;
+    background-color: rgba(227, 232, 225, 0.7);
 }
 
 #memory {
-    background-color: #5c6b73;
+    background-color: rgba(227, 232, 225, 0.7);
 }
 
 #disk {
-    background-color: #5c6b73;
+    background-color: rgba(227, 232, 225, 0.7);
 }
 
 #backlight {
-    background-color: #5c6b73;
+    background-color: rgba(227, 232, 225, 0.7);
 }
 
 #network {
-    background-color: #5c6b73;
+    background-color: rgba(227, 232, 225, 0.7);
 }
 
 #network.disconnected {
-    background-color: #c2dfe3;
-    color: #253237;
+    background-color: #FAC244;
+    color: #3B3B3B;
 }
 
 #pulseaudio {
-    background-color: #5c6b73;
+    background-color: rgba(227, 232, 225, 0.7);
 }
 
 #pulseaudio.muted {
-    background-color: #253237;
-    color: #9db4c0;
+    background-color: #64AEC4;
+    color: #3B3B3B;
 }
 
 #wireplumber {
-    background-color: #5c6b73;
+    background-color: rgba(227, 232, 225, 0.7);
 }
 
 #wireplumber.muted {
-    background-color: #c2dfe3;
-    color: #253237;
+    background-color: #FAC244;
+    color: #3B3B3B;
 }
 
 #custom-media {
-    background-color: #5c6b73;
+    background-color: rgba(227, 232, 225, 0.7);
     min-width: 100px;
 }
 
 #temperature {
-    background-color: #5c6b73;
+    background-color: rgba(227, 232, 225, 0.7);
 }
 
 #temperature.critical {
-    background-color: #c2dfe3;
-    color: #253237;
+    background-color: #FAC244;
+    color: #3B3B3B;
 }
 
 #tray {
-    background-color: #5c6b73;
+    background-color: rgba(227, 232, 225, 0.7);
 }
 
 #tray > .passive {
@@ -208,42 +220,43 @@ button:hover {
 
 #tray > .needs-attention {
     -gtk-icon-effect: highlight;
-    background-color: #9db4c0;
-    color: #253237;
+    background-color: #FAC244;
+    color: #3B3B3B;
 }
 
 #idle_inhibitor {
-    background-color: #5c6b73;
+    background-color: rgba(227, 232, 225, 0.7);
 }
 
 #idle_inhibitor.activated {
-    background-color: #9db4c0;
-    color: #253237;
+    background-color: #64AEC4;
+    color: #3B3B3B;
 }
 
 #mpd {
-    background-color: #5c6b73;
+    background-color: rgba(227, 232, 225, 0.7);
 }
 
 #mpd.disconnected {
-    background-color: #c2dfe3;
-    color: #253237;
+    background-color: #FAC244;
+    color: #3B3B3B;
 }
 
 #mpd.stopped {
-    background-color: #253237;
+    background-color: #64AEC4;
+    color: #3B3B3B;
 }
 
 #mpd.paused {
-    background-color: #5c6b73;
+    background-color: rgba(227, 232, 225, 0.7);
 }
 
 #custom-system {
-    background-color: #5c6b73;
+    background-color: rgba(227, 232, 225, 0.7);
 }
 
 #scratchpad {
-    background: rgba(0, 0, 0, 0.2);
+    background: rgba(0, 0, 0, 0.1);
 }
 
 #scratchpad.empty {
@@ -256,18 +269,18 @@ button:hover {
 
 #privacy-item {
     padding: 0 5px;
-    color: #e0fbfc;
+    color: #3B3B3B;
 }
 
 #privacy-item.screenshare {
-    background-color: #9db4c0;
-    color: #253237;
+    background-color: #FAC244;
+    color: #3B3B3B;
 }
 
 #privacy-item.audio-in {
-    background-color: #5c6b73;
+    background-color: rgba(227, 232, 225, 0.7);
 }
 
 #privacy-item.audio-out {
-    background-color: #5c6b73;
+    background-color: rgba(227, 232, 225, 0.7);
 }
