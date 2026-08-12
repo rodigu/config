@@ -2,7 +2,7 @@
 
 ## Overview
 
-This directory (`~/.config/`) contains dotfiles for a Linux desktop setup using Wayland with Hyprland compositor. The theming follows a "Coastal Slate" palette with light mode design.
+This directory (`~/.config/`) contains dotfiles for a Linux desktop setup using Wayland with Hyprland compositor. The theming follows a dark violet palette.
 
 ## Color Palette
 
@@ -10,15 +10,16 @@ Reference: `README.md` for full palette documentation.
 
 | Color | Name | Hex | Role |
 |-------|------|-----|------|
-| 1 | Gunmetal | `#3B3B3B` | Primary text |
-| 2 | Cerulean | `#407489` | Muted accent |
-| 3 | Blue Bell | `#4C98C3` | Primary accent |
-| 4 | Pacific Blue | `#64AEC4` | Highlight accent |
-| 5 | Granite | `#4F5D4E` | Muted text |
-| 6 | Dry Sage | `#C1BD8E` | Secondary accent |
-| 7 | Soft Linen | `#E3E8E1` | Background |
-| 8 | Tuscan Sun | `#FAC244` | Warning/highlight |
-| 9 | Lobster Pink | `#B76862` | Error |
+| 1 | Pale Mauve | `#F9DAEF` | Primary text |
+| 2 | Thistle | `#D7BDEC` | Secondary text |
+| 3 | Plum | `#D18DBD` | Tertiary accent |
+| 4 | Soft Periwinkle | `#8485D9` | Primary accent |
+| 5 | Hot Pink | `#CB3977` | Accent |
+| 6 | Berry Blush | `#A44E88` | Error/highlight |
+| 7 | Grape Soda | `#724782` | Muted accent |
+| 8 | Deep Purple | `#33214B` | Dark surface |
+| 9 | Deep Berry | `#421E3D` | Dark surface |
+| 10 | Black | `#090307` | Background |
 
 ## Themed Software
 
@@ -29,13 +30,14 @@ Reference: `README.md` for full palette documentation.
 | Kitty | `~/.config/kitty/` | `themes/custom.conf` | Terminal - include from `kitty.conf` |
 | Wofi | `~/.config/wofi/` | `style.css` | App launcher - launched with `--style` flag |
 | Mako | `~/.config/mako/` | `config` | Notifications - uses hex+alpha for transparency |
+| Zed | `~/.config/zed/` | `themes/coastal-slate.json` | Code editor - JSON theme format |
 | Pi | `~/.pi/agent/themes/` | `coastal-slate.json` | AI coding agent theme |
 
 ## Key Design Decisions
 
-- **Light theme**: Soft Linen background with gunmetal text for high contrast
+- **Dark theme**: Near-black background with thistle text for high contrast
 - **Outlined modules**: Waybar modules use `border: 1px solid` with transparent background
-- **Circular workspaces**: 18px circles with numbers, active=Granite (0.7 opacity), inactive=Soft Linen (0.2 opacity)
+- **Circular workspaces**: 18px circles with numbers, active=Grape Soda (0.7 opacity), inactive=Thistle (0.2 opacity)
 - **Transparency**: Modules at 0.7, bar is fully transparent
 - **Rounding**: 5px for modules, 10px for bar
 
@@ -71,22 +73,27 @@ notify-send "Title" "Body"
 │   └── themes/
 │       └── custom.conf # Kitty theme
 ├── mako/
-│   └── config          # Notification daemon
+│   └── config           # Notification daemon
 ├── waybar/
-│   ├── config.jsonc    # Module layout and settings
-│   ├── style.css       # Visual styling
+│   ├── config.jsonc     # Module layout and settings
+│   ├── style.css        # Visual styling
 │   └── scripts/
-│       └── system.sh   # Custom system stats module
-└── wofi/
-    ├── config          # Wofi settings
-    └── style.css       # Wofi styling
+│       └── system.sh    # Custom system stats module
+├── wofi/
+│   ├── config           # Wofi settings
+│   └── style.css        # Wofi styling
+└── zed/
+    ├── settings.json    # Editor settings
+    └── themes/
+        └── coastal-slate.json # Zed theme
 ```
 
 ## Important Notes
 
+- **Only use colors from the palette above** - never introduce new colors
 - Hyprland uses Lua config (`hyprland.lua`), not traditional `.conf`
 - Wofi requires `--style` flag in Hyprland keybind to load theme
-- Mako uses hex+alpha format for transparency (e.g., `#e3e8e1cc` for 80%)
+- Mako uses hex+alpha format for transparency (e.g., `#D7BDECcc` for 80% opacity)
 - GTK CSS (used by Waybar/Wofi) has limited animation support
 - Always use `pkill -SIGUSR2 waybar` for config reload, full restart for style changes
 - Never use `git add .` - always stage specific files
