@@ -1,4 +1,4 @@
-# Mako notification daemon config - Coastal Slate theme
+# Mako notification daemon config
 
 # Appearance
 font=Space Mono 11
@@ -11,23 +11,23 @@ border-radius=5
 max-visible=5
 max-history=20
 
-# Colors (Coastal Slate palette)
-background-color=#e3e8e1cc
-text-color=#3B3B3B
-border-color=#4C98C3
+# Colors
+background-color=#090307cc
+text-color=#D7BDEC
+border-color=#8485D9
 
 # Urgency levels
 [urgency=low]
-border-color=#407489
+border-color=#724782
 
 [urgency=normal]
-border-color=#4C98C3
-progress-color=source #FAC244
+border-color=#8485D9
+progress-color=source #D18DBD
 
 [urgency=critical]
-border-color=#B76862
-text-color=#3B3B3B
-progress-color=source #B76862
+border-color=#A44E88
+text-color=#D7BDEC
+progress-color=source #A44E88
 
 # Actions
 on-notify=none
@@ -41,4 +41,4 @@ default-timeout=5000
 ignore-timeout=1
 
 # Progress
-progress-color=source #4C98C3
+progress-color=source #8485D9

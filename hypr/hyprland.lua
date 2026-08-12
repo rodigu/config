@@ -80,7 +80,7 @@ end)
 
 -- See https://wiki.hypr.land/Configuring/Advanced-and-Cool/Environment-variables/
 hl.env("QT_QPA_PLATFORMTHEME", "qt6ct")
-hl.env("GTK_THEME","Adwaita:dark")
+hl.env("GTK_THEME","Argenteuil")
 hl.env("GTK2_RC_FILES","/usr/share/themes/Adwaita-dark/gtk-2.0/gtkrc")
 hl.env("QT_STYLE_OVERRIDE","Adwaita-Dark")
 hl.env("XCURSOR_SIZE", "24")
@@ -119,8 +119,8 @@ hl.config({
         border_size = 2,
 
         col = {
-            active_border   = "rgba(FAC244ee)",
-            inactive_border = "rgba(B76862aa)",
+            active_border   = "rgba(8485D9ee)",
+            inactive_border = "rgba(724782aa)",
         },
 
         -- Set to true to enable resizing windows by clicking and dragging on borders and gaps
@@ -137,14 +137,14 @@ hl.config({
         rounding_power = 2,
 
         -- Change transparency of focused and unfocused windows
-        active_opacity   = 1.0,
+        active_opacity   = 0.95,
         inactive_opacity = 0.9,
 
         shadow = {
             enabled      = true,
             range        = 4,
             render_power = 3,
-            color        = 0xee000000,
+            color        = 0xee090307,
         },
 
         blur = {

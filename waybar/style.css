@@ -7,7 +7,7 @@ window#waybar {
     background-color: transparent;
     border: none;
     border-radius: 10px;
-    color: #3B3B3B;
+    color: #D7BDEC;
     margin: 5px;
 }
 
@@ -30,37 +30,37 @@ button:hover {
     padding: 0;
     min-width: 18px;
     min-height: 18px;
-    background-color: rgba(227, 232, 225, 0.7);
-    color: #4F5D4E;
-    border: 2px solid rgba(227, 232, 225, 0.6);
+    background-color: rgba(9, 3, 7, 0.7);
+    color: #724782;
+    border: 2px solid rgba(9, 3, 7, 0.6);
     border-radius: 50%;
     margin: 5px 3px;
     font-size: 10px;
 }
 
 #workspaces button:hover {
-    background-color: #C1BD8E;
-    color: #3B3B3B;
+    background-color: #D18DBD;
+    color: #D7BDEC;
 }
 
 #workspaces button.active,
 #workspaces button.focused {
-    background-color: rgba(79, 93, 78, 0.7);
-    color: #E3E8E1;
-    border: 2px solid rgba(227, 232, 225, 0.6);
+    background-color: rgba(114, 71, 130, 0.7);
+    color: #090307;
+    border: 2px solid rgba(9, 3, 7, 0.6);
     box-shadow: none;
 }
 
 #workspaces button.urgent {
-    background-color: #FAC244;
-    color: #3B3B3B;
-    border: 2px solid #B76862;
+    background-color: #D18DBD;
+    color: #D7BDEC;
+    border: 2px solid #A44E88;
 }
 
 #mode {
-    background-color: rgba(227, 232, 225, 0.7);
+    background-color: rgba(9, 3, 7, 0.7);
     border: none;
-    color: #3B3B3B;
+    color: #D7BDEC;
     border-radius: 5px;
     box-shadow: none;
 }
@@ -84,8 +84,8 @@ button:hover {
 #custom-system,
 #mpd {
     padding: 0 12px;
-    color: #3B3B3B;
-    background-color: rgba(227, 232, 225, 0.7);
+    color: #D7BDEC;
+    background-color: rgba(9, 3, 7, 0.7);
     border: none;
     border-radius: 5px;
     margin: 3px 2px;
@@ -105,34 +105,34 @@ button:hover {
 }
 
 #clock {
-    background-color: rgba(227, 232, 225, 0.7);
+    background-color: rgba(9, 3, 7, 0.7);
 }
 
 #battery {
-    background-color: rgba(227, 232, 225, 0.7);
+    background-color: rgba(9, 3, 7, 0.7);
 }
 
 #battery.charging,
 #battery.plugged {
-    background-color: #64AEC4;
-    color: #3B3B3B;
+    background-color: #8485D9;
+    color: #D7BDEC;
 }
 
 @keyframes blink {
     to {
-        background-color: #B76862;
-        color: #E3E8E1;
+        background-color: #A44E88;
+        color: #090307;
     }
 }
 
 #battery.warning:not(.charging) {
-    background-color: #FAC244;
-    color: #3B3B3B;
+    background-color: #D18DBD;
+    color: #D7BDEC;
 }
 
 #battery.critical:not(.charging) {
-    background-color: #B76862;
-    color: #E3E8E1;
+    background-color: #A44E88;
+    color: #090307;
     animation-name: blink;
     animation-duration: 0.5s;
     animation-timing-function: steps(12);
@@ -142,82 +142,82 @@ button:hover {
 
 #power-profiles-daemon {
     padding-right: 15px;
-    background-color: rgba(227, 232, 225, 0.7);
+    background-color: rgba(9, 3, 7, 0.7);
 }
 
 #power-profiles-daemon.performance {
-    background-color: #FAC244;
-    color: #3B3B3B;
+    background-color: #D18DBD;
+    color: #D7BDEC;
 }
 
 #power-profiles-daemon.balanced {
-    background-color: rgba(227, 232, 225, 0.7);
+    background-color: rgba(9, 3, 7, 0.7);
 }
 
 #power-profiles-daemon.power-saver {
-    background-color: #64AEC4;
-    color: #3B3B3B;
+    background-color: #8485D9;
+    color: #D7BDEC;
 }
 
 #cpu {
-    background-color: rgba(227, 232, 225, 0.7);
+    background-color: rgba(9, 3, 7, 0.7);
 }
 
 #memory {
-    background-color: rgba(227, 232, 225, 0.7);
+    background-color: rgba(9, 3, 7, 0.7);
 }
 
 #disk {
-    background-color: rgba(227, 232, 225, 0.7);
+    background-color: rgba(9, 3, 7, 0.7);
 }
 
 #backlight {
-    background-color: rgba(227, 232, 225, 0.7);
+    background-color: rgba(9, 3, 7, 0.7);
 }
 
 #network {
-    background-color: rgba(227, 232, 225, 0.7);
+    background-color: rgba(9, 3, 7, 0.7);
 }
 
 #network.disconnected {
-    background-color: #FAC244;
-    color: #3B3B3B;
+    background-color: #D18DBD;
+    color: #D7BDEC;
 }
 
 #pulseaudio {
-    background-color: rgba(227, 232, 225, 0.7);
+    background-color: rgba(9, 3, 7, 0.7);
 }
 
 #pulseaudio.muted {
-    background-color: #64AEC4;
-    color: #3B3B3B;
+    background-color: #8485D9;
+    color: #D7BDEC;
 }
 
 #wireplumber {
-    background-color: rgba(227, 232, 225, 0.7);
+    background-color: rgba(9, 3, 7, 0.7);
 }
 
 #wireplumber.muted {
-    background-color: #FAC244;
-    color: #3B3B3B;
+    background-color: #D18DBD;
+    color: #D7BDEC;
 }
 
 #custom-media {
-    background-color: rgba(227, 232, 225, 0.7);
+    background-color: rgba(9, 3, 7, 0.7);
     min-width: 100px;
 }
 
 #temperature {
-    background-color: rgba(227, 232, 225, 0.7);
+    background-color: rgba(9, 3, 7, 0.7);
 }
 
 #temperature.critical {
-    background-color: #B76862;
-    color: #E3E8E1;
+    background-color: #A44E88;
+    color: #090307;
 }
 
 #tray {
-    background-color: rgba(227, 232, 225, 0.7);
+    background-color: rgba(9, 3, 7, 0.7);
 }
 
 #tray > .passive {
@@ -226,43 +226,43 @@ button:hover {
 
 #tray > .needs-attention {
     -gtk-icon-effect: highlight;
-    background-color: #FAC244;
-    color: #3B3B3B;
+    background-color: #D18DBD;
+    color: #D7BDEC;
 }
 
 #idle_inhibitor {
-    background-color: rgba(227, 232, 225, 0.7);
+    background-color: rgba(9, 3, 7, 0.7);
 }
 
 #idle_inhibitor.activated {
-    background-color: #64AEC4;
-    color: #3B3B3B;
+    background-color: #8485D9;
+    color: #D7BDEC;
 }
 
 #mpd {
-    background-color: rgba(227, 232, 225, 0.7);
+    background-color: rgba(9, 3, 7, 0.7);
 }
 
 #mpd.disconnected {
-    background-color: #FAC244;
-    color: #3B3B3B;
+    background-color: #D18DBD;
+    color: #D7BDEC;
 }
 
 #mpd.stopped {
-    background-color: #64AEC4;
-    color: #3B3B3B;
+    background-color: #8485D9;
+    color: #D7BDEC;
 }
 
 #mpd.paused {
-    background-color: rgba(227, 232, 225, 0.7);
+    background-color: rgba(9, 3, 7, 0.7);
 }
 
 #custom-system {
-    background-color: rgba(227, 232, 225, 0.7);
+    background-color: rgba(9, 3, 7, 0.7);
 }
 
 #scratchpad {
-    background: rgba(0, 0, 0, 0.1);
+    background: rgba(9, 3, 7, 0.1);
 }
 
 #scratchpad.empty {
@@ -275,18 +275,18 @@ button:hover {
 
 #privacy-item {
     padding: 0 5px;
-    color: #3B3B3B;
+    color: #D7BDEC;
 }
 
 #privacy-item.screenshare {
-    background-color: #B76862;
-    color: #E3E8E1;
+    background-color: #A44E88;
+    color: #090307;
 }
 
 #privacy-item.audio-in {
-    background-color: rgba(227, 232, 225, 0.7);
+    background-color: rgba(9, 3, 7, 0.7);
 }
 
 #privacy-item.audio-out {
-    background-color: rgba(227, 232, 225, 0.7);
+    background-color: rgba(9, 3, 7, 0.7);
 }

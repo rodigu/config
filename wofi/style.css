@@ -2,22 +2,22 @@ window {
     font-family: "Space Mono", sans-serif;
     font-size: 13px;
     background-color: transparent;
-    color: #3B3B3B;
+    color: #D7BDEC;
     border-radius: 5px;
     border: none;
 }
 
 #input {
-    background-color: transparent;
-    color: #3B3B3B;
-    border: 2px solid #4C98C3;
+    background-color: rgba(9, 3, 7, 0.9);
+    color: #D7BDEC;
+    border: 2px solid #8485D9;
     border-radius: 2px;
     padding: 3px 3px;
     margin: 10px;
 }
 
 #input:focus {
-    border-color: #B76862;
+    border-color: #A44E88;
 }
 
 #inner-box {
@@ -33,7 +33,7 @@ window {
 }
 
 #text {
-    color: #3B3B3B;
+    color: #D7BDEC;
     margin: 0;
     text-align: right;
 }
@@ -43,29 +43,29 @@ window {
     margin: 5px 10px;
     border-radius: 2px;
     border: 2px solid transparent;
-    background-color: rgba(227, 232, 225, 0.2);
+    background-color: rgba(114, 71, 130, 0.6);
     text-align: right;
 }
 
 #entry:selected {
-    background-color: rgba(227, 232, 225, 0.6);
-    color: #3B3B3B;
-    border: 2px solid #FAC244;
+    background-color: rgba(215, 189, 236, 0.9);
+    color: #090307;
+    border: 2px solid #D18DBD;
     outline: none;
 }
 
 #entry:selected #text {
-    color: #3B3B3B;
+    color: #090307;
 }
 
 #entry:hover {
-    background-color: rgba(183, 104, 98, 0.15);
-    color: #3B3B3B;
-    border: 2px solid #B76862;
+    background-color: rgba(164, 78, 136, 0.15);
+    color: #D7BDEC;
+    border: 2px solid #A44E88;
 }
 
 #entry:hover #text {
-    color: #3B3B3B;
+    color: #D7BDEC;
 }
 
 #img {
