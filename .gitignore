@@ -29,6 +29,14 @@ micro/syntax/
 user-dirs.dirs
 user-dirs.locale
 
+# Application state
+GIMP/
+go/
+gopls/
+pavucontrol.ini
+shelly/
+kwinrc
+
 # Editor temp files
 *.local
 *.bak
