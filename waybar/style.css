@@ -7,7 +7,7 @@ window#waybar {
     background-color: transparent;
     border: none;
     border-radius: 10px;
-    color: #D7BDEC;
+    color: rgba(248, 249, 250, 1);
     margin: 5px;
 }
 
@@ -29,38 +29,43 @@ button:hover {
 #workspaces button {
     padding: 0;
     min-width: 18px;
-    min-height: 18px;
-    background-color: rgba(9, 3, 7, 0.7);
-    color: #724782;
-    border: 2px solid rgba(9, 3, 7, 0.6);
-    border-radius: 50%;
-    margin: 5px 3px;
+    min-height: 14px;
+    background-color: transparent;
+    color: rgba(173, 181, 189, 1);
+    border: none;
+    border-radius: 0;
+    margin: 1px;
     font-size: 10px;
+    text-shadow:
+        -1px -1px 0 #343a40,
+         1px -1px 0 #343a40,
+        -1px  1px 0 #343a40,
+         1px  1px 0 #343a40;
 }
 
 #workspaces button:hover {
-    background-color: #D18DBD;
-    color: #D7BDEC;
+    background-color: transparent;
+    color: rgba(248, 249, 250, 1);
 }
 
 #workspaces button.active,
 #workspaces button.focused {
-    background-color: rgba(114, 71, 130, 0.7);
-    color: #090307;
-    border: 2px solid rgba(9, 3, 7, 0.6);
+    background-color: transparent;
+    color: rgba(193, 18, 31, 1);
+    border: none;
     box-shadow: none;
 }
 
 #workspaces button.urgent {
-    background-color: #D18DBD;
-    color: #D7BDEC;
-    border: 2px solid #A44E88;
+    background-color: transparent;
+    color: rgba(248, 249, 250, 1);
+    border: none;
 }
 
 #mode {
-    background-color: rgba(9, 3, 7, 0.7);
+    background-color: rgba(33, 37, 41, 0.702);
     border: none;
-    color: #D7BDEC;
+    color: rgba(248, 249, 250, 1);
     border-radius: 5px;
     box-shadow: none;
 }
@@ -84,8 +89,8 @@ button:hover {
 #custom-system,
 #mpd {
     padding: 0 12px;
-    color: #D7BDEC;
-    background-color: rgba(9, 3, 7, 0.7);
+    color: rgba(248, 249, 250, 1);
+    background-color: rgba(33, 37, 41, 0.702);
     border: none;
     border-radius: 5px;
     margin: 3px 2px;
@@ -93,7 +98,13 @@ button:hover {
 
 #window,
 #workspaces {
-    margin: 0 4px;
+    margin: 3px 2px;
+}
+
+#workspaces {
+    padding: 0 1px;
+    background-color: rgba(33, 37, 41, 0.702);
+    border-radius: 5px;
 }
 
 .modules-left > widget:first-child > #workspaces {
@@ -105,34 +116,34 @@ button:hover {
 }
 
 #clock {
-    background-color: rgba(9, 3, 7, 0.7);
+    background-color: rgba(33, 37, 41, 0.702);
 }
 
 #battery {
-    background-color: rgba(9, 3, 7, 0.7);
+    background-color: rgba(33, 37, 41, 0.702);
 }
 
 #battery.charging,
 #battery.plugged {
-    background-color: #8485D9;
-    color: #D7BDEC;
+    background-color: rgba(102, 155, 188, 1);
+    color: rgba(248, 249, 250, 1);
 }
 
 @keyframes blink {
     to {
-        background-color: #A44E88;
-        color: #090307;
+        background-color: rgba(163, 177, 138, 1);
+        color: rgba(33, 37, 41, 1);
     }
 }
 
 #battery.warning:not(.charging) {
-    background-color: #D18DBD;
-    color: #D7BDEC;
+    background-color: rgba(193, 18, 31, 1);
+    color: rgba(248, 249, 250, 1);
 }
 
 #battery.critical:not(.charging) {
-    background-color: #A44E88;
-    color: #090307;
+    background-color: rgba(163, 177, 138, 1);
+    color: rgba(33, 37, 41, 1);
     animation-name: blink;
     animation-duration: 0.5s;
     animation-timing-function: steps(12);
@@ -142,82 +153,62 @@ button:hover {
 
 #power-profiles-daemon {
     padding-right: 15px;
-    background-color: rgba(9, 3, 7, 0.7);
+    background-color: rgba(33, 37, 41, 0.702);
 }
 
 #power-profiles-daemon.performance {
-    background-color: #D18DBD;
-    color: #D7BDEC;
+    background-color: rgba(193, 18, 31, 1);
+    color: rgba(248, 249, 250, 1);
 }
 
 #power-profiles-daemon.balanced {
-    background-color: rgba(9, 3, 7, 0.7);
+    background-color: rgba(33, 37, 41, 0.702);
 }
 
 #power-profiles-daemon.power-saver {
-    background-color: #8485D9;
-    color: #D7BDEC;
+    background-color: rgba(102, 155, 188, 1);
+    color: rgba(248, 249, 250, 1);
 }
 
-#cpu {
-    background-color: rgba(9, 3, 7, 0.7);
-}
-
-#memory {
-    background-color: rgba(9, 3, 7, 0.7);
-}
-
-#disk {
-    background-color: rgba(9, 3, 7, 0.7);
-}
-
-#backlight {
-    background-color: rgba(9, 3, 7, 0.7);
-}
-
-#network {
-    background-color: rgba(9, 3, 7, 0.7);
+#cpu,
+#memory,
+#disk,
+#backlight,
+#network,
+#pulseaudio,
+#wireplumber,
+#temperature,
+#tray,
+#idle_inhibitor,
+#mpd,
+#custom-system,
+#privacy-item.audio-in,
+#privacy-item.audio-out {
+    background-color: rgba(33, 37, 41, 0.702);
 }
 
 #network.disconnected {
-    background-color: #D18DBD;
-    color: #D7BDEC;
-}
-
-#pulseaudio {
-    background-color: rgba(9, 3, 7, 0.7);
+    background-color: rgba(193, 18, 31, 1);
+    color: rgba(248, 249, 250, 1);
 }
 
 #pulseaudio.muted {
-    background-color: #8485D9;
-    color: #D7BDEC;
-}
-
-#wireplumber {
-    background-color: rgba(9, 3, 7, 0.7);
+    background-color: rgba(102, 155, 188, 1);
+    color: rgba(248, 249, 250, 1);
 }
 
 #wireplumber.muted {
-    background-color: #D18DBD;
-    color: #D7BDEC;
+    background-color: rgba(193, 18, 31, 1);
+    color: rgba(248, 249, 250, 1);
 }
 
 #custom-media {
-    background-color: rgba(9, 3, 7, 0.7);
     min-width: 100px;
 }
 
-#temperature {
-    background-color: rgba(9, 3, 7, 0.7);
-}
-
 #temperature.critical {
-    background-color: #A44E88;
-    color: #090307;
-}
-
-#tray {
-    background-color: rgba(9, 3, 7, 0.7);
+    background-color: rgba(163, 177, 138, 1);
+    color: rgba(33, 37, 41, 1);
 }
 
 #tray > .passive {
@@ -226,43 +217,31 @@ button:hover {
 
 #tray > .needs-attention {
     -gtk-icon-effect: highlight;
-    background-color: #D18DBD;
-    color: #D7BDEC;
-}
-
-#idle_inhibitor {
-    background-color: rgba(9, 3, 7, 0.7);
+    background-color: rgba(193, 18, 31, 1);
+    color: rgba(248, 249, 250, 1);
 }
 
 #idle_inhibitor.activated {
-    background-color: #8485D9;
-    color: #D7BDEC;
-}
-
-#mpd {
-    background-color: rgba(9, 3, 7, 0.7);
+    background-color: rgba(102, 155, 188, 1);
+    color: rgba(248, 249, 250, 1);
 }
 
 #mpd.disconnected {
-    background-color: #D18DBD;
-    color: #D7BDEC;
+    background-color: rgba(193, 18, 31, 1);
+    color: rgba(248, 249, 250, 1);
 }
 
 #mpd.stopped {
-    background-color: #8485D9;
-    color: #D7BDEC;
+    background-color: rgba(102, 155, 188, 1);
+    color: rgba(248, 249, 250, 1);
 }
 
 #mpd.paused {
-    background-color: rgba(9, 3, 7, 0.7);
-}
-
-#custom-system {
-    background-color: rgba(9, 3, 7, 0.7);
+    background-color: rgba(33, 37, 41, 0.702);
 }
 
 #scratchpad {
-    background: rgba(9, 3, 7, 0.1);
+    background: rgba(33, 37, 41, 0.102);
 }
 
 #scratchpad.empty {
@@ -275,18 +254,10 @@ button:hover {
 
 #privacy-item {
     padding: 0 5px;
-    color: #D7BDEC;
+    color: rgba(248, 249, 250, 1);
 }
 
 #privacy-item.screenshare {
-    background-color: #A44E88;
-    color: #090307;
-}
-
-#privacy-item.audio-in {
-    background-color: rgba(9, 3, 7, 0.7);
-}
-
-#privacy-item.audio-out {
-    background-color: rgba(9, 3, 7, 0.7);
+    background-color: rgba(163, 177, 138, 1);
+    color: rgba(33, 37, 41, 1);
 }

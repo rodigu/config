@@ -12,22 +12,22 @@ max-visible=5
 max-history=20
 
 # Colors
-background-color=#090307cc
-text-color=#D7BDEC
-border-color=#8485D9
+background-color=#212529cc
+text-color=#f8f9faff
+border-color=#ced4daff
 
 # Urgency levels
 [urgency=low]
-border-color=#724782
+border-color=#003049ff
 
 [urgency=normal]
-border-color=#8485D9
-progress-color=source #D18DBD
+border-color=#669bbcff
+progress-color=source #669bbcff
 
 [urgency=critical]
-border-color=#A44E88
-text-color=#D7BDEC
-progress-color=source #A44E88
+border-color=#a3b18aff
+text-color=#f8f9faff
+progress-color=source #c1121fff
 
 # Actions
 on-notify=none
@@ -41,4 +41,4 @@ default-timeout=5000
 ignore-timeout=1
 
 # Progress
-progress-color=source #8485D9
+progress-color=source #669bbcff
