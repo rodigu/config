@@ -2,24 +2,32 @@
 
 ## Overview
 
-This directory (`~/.config/`) contains dotfiles for a Linux desktop setup using Wayland with Hyprland compositor. The theming follows a dark violet palette.
+This directory (`~/.config/`) contains dotfiles for a Linux desktop setup using Wayland with Hyprland compositor. The theming uses a monochrome palette with separate accent colors.
 
 ## Color Palette
 
-Reference: `README.md` for full palette documentation.
+Reference: `README.md` for full palette documentation. The base theme is monochrome, with separate accent colors.
 
 | Color | Name | Hex | Role |
 |-------|------|-----|------|
-| 1 | Pale Mauve | `#F9DAEF` | Primary text |
-| 2 | Thistle | `#D7BDEC` | Secondary text |
-| 3 | Plum | `#D18DBD` | Tertiary accent |
-| 4 | Soft Periwinkle | `#8485D9` | Primary accent |
-| 5 | Hot Pink | `#CB3977` | Accent |
-| 6 | Berry Blush | `#A44E88` | Error/highlight |
-| 7 | Grape Soda | `#724782` | Muted accent |
-| 8 | Deep Purple | `#33214B` | Dark surface |
-| 9 | Deep Berry | `#421E3D` | Dark surface |
-| 10 | Black | `#090307` | Background |
+| 1 | Bright Snow | `#f8f9faff` | Primary text |
+| 2 | Platinum | `#e9ecefff` | Secondary text |
+| 3 | Alabaster Grey | `#dee2e6ff` | Tertiary text |
+| 4 | Pale Slate | `#ced4daff` | Borders |
+| 5 | Pale Slate 2 | `#adb5bdff` | Muted text |
+| 6 | Slate Grey | `#6c757dff` | Muted accent |
+| 7 | Iron Grey | `#495057ff` | Surface |
+| 8 | Gunmetal | `#343a40ff` | Dark surface |
+| 9 | Carbon Black | `#212529ff` | Background |
+
+### Accent Colors
+
+| Color | Name | Hex | Role |
+|-------|------|-----|------|
+| 1 | Dry Sage | `#a3b18aff` | Accent |
+| 2 | Brick Red | `#c1121fff` | Accent |
+| 3 | Deep Space Blue | `#003049ff` | Accent |
+| 4 | Steel Blue | `#669bbcff` | Accent |
 
 ## Themed Software
 
@@ -35,9 +43,9 @@ Reference: `README.md` for full palette documentation.
 
 ## Key Design Decisions
 
-- **Dark theme**: Near-black background with thistle text for high contrast
+- **Dark theme**: Carbon Black background with Bright Snow and Platinum text for high contrast
 - **Outlined modules**: Waybar modules use `border: 1px solid` with transparent background
-- **Circular workspaces**: 18px circles with numbers, active=Grape Soda (0.7 opacity), inactive=Thistle (0.2 opacity)
+- **Circular workspaces**: 18px circles with numbers, active=Slate Grey (0.7 opacity), inactive=Pale Slate 2 (0.2 opacity)
 - **Transparency**: Modules at 0.7, bar is fully transparent
 - **Rounding**: 5px for modules, 10px for bar
 
@@ -90,10 +98,10 @@ notify-send "Title" "Body"
 
 ## Important Notes
 
-- **Only use colors from the palette above** - never introduce new colors
+- **Only use colors from the documented palette** - never introduce new colors
 - Hyprland uses Lua config (`hyprland.lua`), not traditional `.conf`
 - Wofi requires `--style` flag in Hyprland keybind to load theme
-- Mako uses hex+alpha format for transparency (e.g., `#D7BDECcc` for 80% opacity)
+- Mako uses the palette's 8-digit hex values for transparency (e.g., `#e9ecefff`)
 - GTK CSS (used by Waybar/Wofi) has limited animation support
 - Always use `pkill -SIGUSR2 waybar` for config reload, full restart for style changes
 - Never use `git add .` - always stage specific files
