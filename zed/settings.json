@@ -7,6 +7,30 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "language_models": {
+    "llama.cpp": {
+      "api_url": "http://localhost:11484"
+    }
+  },
+  "edit_predictions": {
+    "open_ai_compatible_api": {
+      "model": "ornith-ai/Ornith-1.0-9B-GGUF:Q4_K_M",
+      "api_url": "http://0.0.0.0:11484"
+    },
+    "provider": "open_ai_compatible_api",
+    "allow_data_collection": "no"
+  },
+  "agent": {
+    "default_model": {
+      "provider": "llama.cpp",
+      "model": "ornith-ai/Ornith-1.0-9B-GGUF:Q4_K_M",
+      "enable_thinking": true
+    },
+    "show_turn_stats": true,
+    "favorite_models": [],
+    "model_parameters": [],
+    "enable_feedback": false
+  },
   "semantic_tokens": "combined",
   "cli_default_open_behavior": "existing_window",
   "telemetry": {
